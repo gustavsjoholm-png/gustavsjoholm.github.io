@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journalist Portfolio - TT Nyhetsbyrån</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 30px;
+            display: block;
+            border: 5px solid #f8f9fa;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #3498db, #2ecc71, #e74c3c);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+            font-weight: 400;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            padding: 12px 30px;
+            background: #34495e;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.95em;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .social-links a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            background: #2c3e50;
+        }
+
+        .email-contact {
+            margin-top: 20px;
+            font-size: 0.95em;
+            color: #7f8c8d;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .email-link {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .email-link:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        .articles-section {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 2.2em;
+            margin-bottom: 40px;
+            color: #2c3e50;
+            font-weight: 400;
+            border-left: 5px solid #3498db;
+            padding-left: 20px;
+        }
+
+        .article-card {
+            background: #f8f9fa;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+
+        .article-card:hover {
+            transform: translateX(5px);
+            border-left-color: #3498db;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .article-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        .article-meta {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .article-description {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+            font-family: 'Arial', sans-serif;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .articles-section {
+                padding: 30px 20px;
+            }
+
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .social-links a {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="profile.jpg" alt="Gustav Sjöholm" class="profile-image">
+            <h1>Gustav Sjöholm</h1>
+            <p class="subtitle">Journalist, TT Nyhetsbyrån</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/gustav-sjöholm-84139a20" target="_blank">LinkedIn</a>
+                <a href="https://x.com/gustavsjoholm" target="_blank">𝕏 (Twitter)</a>
+            </div>
+            <div class="email-contact">
+                Kontakt: <a href="#" class="email-link" id="email-link">Visa e-post</a>
+            </div>
+        </header>
+
+        <script>
+            // Bot-resistant email display
+            document.getElementById('email-link').addEventListener('click', function(e) {
+                e.preventDefault();
+                const user = 'gustav.sjoholm';
+                const domain = 'tt.se';
+                const email = user + '@' + domain;
+                this.href = 'mailto:' + email;
+                this.textContent = email;
+            });
+        </script>
+
+        <section class="articles-section">
+            <h2>Utvalda Artiklar</h2>
+
+            <div class="article-card">
+                <h3>Europas största glaciär dör inför turisters ögon</h3>
+                <p class="article-meta">TT Nyhetsbyrån · 18 november 2025</p>
+                <p class="article-description">
+                    Frankrikes största glaciär, Mer de Glace vid Mont Blanc, smälter bort i allt snabbare takt. Ett reportage från platsen där turister vittnar om klimatförändringarnas effekter på ismassorna.
+                </p>
+                <a href="https://www.bohuslaningen.se/nyheter/sverige/europas-storsta-glaciar-dor-infor-turisters-ogon-.554a06a8-21c3-5717-90f6-456f9dd09ea8" class="read-more" target="_blank">Läs artikel →</a>
+            </div>
+
+            <div class="article-card">
+                <h3>Sveriges glaciärer krymper rekordmycket</h3>
+                <p class="article-meta">TT Nyhetsbyrån · 2024</p>
+                <p class="article-description">
+                    Enligt mätningar från Stockholms universitet krymper Sveriges glaciärer i rekordtakt i år. Klimatförändringarna märks tydligt i fjällvärlden.
+                </p>
+                <a href="#" class="read-more">Läs artikel →</a>
+            </div>
+
+            <div class="article-card">
+                <h3>Flera grödor har ökat i pris till följd av extremväder</h3>
+                <p class="article-meta">TT Nyhetsbyrån · 2024</p>
+                <p class="article-description">
+                    En genomgång av hur extremväder påverkar livsmedelspriserna. Sex varor som redan har blivit dyrare i matbutiken till följd av klimatförändringar.
+                </p>
+                <a href="#" class="read-more">Läs artikel →</a>
+            </div>
+
+            <div class="article-card">
+                <h3>Skidsporten går en mörk framtid till mötes</h3>
+                <p class="article-meta">TT Nyhetsbyrån · 2024</p>
+                <p class="article-description">
+                    Krympande glaciärer, kala berg och tävlingar som regnar bort. Internationella skid- och snowboardförbundet varnar för klimatförändringarnas påverkan på vintersporter.
+                </p>
+                <a href="#" class="read-more">Läs artikel →</a>
+            </div>
+
+            <div class="article-card">
+                <h3>Haven blir varmare, de värsta vågorna blir högre</h3>
+                <p class="article-meta">TT Nyhetsbyrån · 2024</p>
+                <p class="article-description">
+                    EU:s klimattjänst Copernicus presenterar en rapport som visar att världshaven mår allt sämre. Algblomning förvärras och havsisen smälter i accelererande takt.
+                </p>
+                <a href="#" class="read-more">Läs artikel →</a>
+            </div>
+
+            <div class="article-card">
+                <h3>Minecraft, Fortnite och Roblox manipulerar barn</h3>
+                <p class="article-meta">TT Nyhetsbyrån · 2024</p>
+                <p class="article-description">
+                    Europeiska konsumentorganisationer anklagar populära spel för att manipulera barn att lägga stora summor pengar på köp inne i spelen.
+                </p>
+                <a href="#" class="read-more">Läs artikel →</a>
+            </div>
+
+            <div class="article-card">
+                <h3>Skellefteå kommun kraftsamlar för arbetsmarknaden</h3>
+                <p class="article-meta">TT Nyhetsbyrån · 24 september 2024</p>
+                <p class="article-description">
+                    Reportage om hur Skellefteå kommun hanterar utmaningar kring arbetskraft och anställda från tredje land. Kommundirektören: "Vi ska göra allt vi kan".
+                </p>
+                <a href="#" class="read-more">Läs artikel →</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>"Journalistik är att publicera det någon inte vill att du ska publicera. Allt annat är PR."</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">— George Orwell</p>
+        </footer>
+    </div>
+</body>
+</html>
