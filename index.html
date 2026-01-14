@@ -44,6 +44,14 @@
             display: block;
             border: 5px solid #f8f9fa;
             box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            filter: grayscale(100%);
+            transition: filter 0.4s ease, transform 0.4s ease;
+            cursor: pointer;
+        }
+
+        .profile-image:hover {
+            filter: grayscale(0%);
+            transform: scale(1.05);
         }
 
         header::before {
@@ -187,6 +195,48 @@
             font-style: italic;
         }
 
+        .muck-rack-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+        }
+
+        .muck-rack-cta h2 {
+            color: white;
+            border: none;
+            padding: 0;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .muck-rack-cta p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        .muck-rack-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1.1em;
+            font-family: 'Arial', sans-serif;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .muck-rack-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2em;
@@ -300,6 +350,12 @@
                 <a href="#" class="read-more">Läs artikel →</a>
             </div>
         </section>
+
+        <div class="muck-rack-cta">
+            <h2>Se alla mina artiklar</h2>
+            <p>Vill du läsa mer? Besök min kompletta portfolio på Muck Rack med 200+ artiklar.</p>
+            <a href="https://muckrack.com/gustav-sjoholm-1" target="_blank" class="muck-rack-button">Gå till Muck Rack →</a>
+        </div>
 
         <footer>
             <p>"Journalistik är att publicera det någon inte vill att du ska publicera. Allt annat är PR."</p>
